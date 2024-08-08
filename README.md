@@ -15,7 +15,7 @@ Before running the application, ensure you have the following tools installed:
 
 To run the application in a Docker container, navigate to the project's root directory and execute:
 
-```bash
+
 docker-compose up
 This command will start the application and set up the database connection within the container.
 
