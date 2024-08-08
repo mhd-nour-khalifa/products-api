@@ -31,71 +31,70 @@ Copy code
 NOTE: In dev mode, Quarkus provides a Dev UI accessible at http://localhost:8080/q/dev/.
 
 ## Testing the Application
-To run tests, execute:
-
-bash
-Copy code
+To test the application, run the following command:
 ./mvnw test
+
 ## Packaging and Running the Application
-To package the application, use:
+The application can be packaged using:
 
-bash
-Copy code
 ./mvnw package
-This creates the quarkus-run.jar file in the target/quarkus-app/ directory. This is not an über-jar; the dependencies are stored in target/quarkus-app/lib/.
+It produces the quarkus-run.jar file in the target/quarkus-app/ directory. Be aware that it’s not an über-jar as the dependencies are copied into the target/quarkus-app/lib/ directory.
 
-To run the packaged application:
+The application is now runnable using java -jar target/quarkus-app/quarkus-run.jar.
 
-bash
-Copy code
-java -jar target/quarkus-app/quarkus-run.jar
-Building an Über-Jar
-To create an über-jar, run:
+If you want to build an über-jar, execute the following command:
 
-bash
-Copy code
 ./mvnw package -Dquarkus.package.jar.type=uber-jar
-You can then run the über-jar with:
+The application, packaged as an über-jar, is now runnable using java -jar target/*-runner.jar.
 
-bash
-Copy code
-java -jar target/*-runner.jar
-## Creating a Native Executable
-To build a native executable, use:
 
-bash
-Copy code
+## Creating a native executable
+You can create a native executable using:
+
 ./mvnw package -Dnative
-If GraalVM is not installed, build the native executable within a container:
+Or, if you don't have GraalVM installed, you can run the native executable build in a container using:
 
-bash
-Copy code
 ./mvnw package -Dnative -Dquarkus.native.container-build=true
-To run the native executable:
+You can then execute your native executable with: ./target/products-api-1.0.0-SNAPSHOT-runner
 
-bash
-Copy code
-./target/products-api-1.0.0-SNAPSHOT-runner
-For more details on building native executables, refer to the Quarkus guide on Maven tooling.
+If you want to learn more about building native executables, please consult https://quarkus.io/guides/maven-tooling.
 
-Related Guides
-REST resources for Hibernate ORM with Panache: Generate Jakarta REST resources for Hibernate Panache entities and repositories.
-REST: Jakarta REST implementation utilizing build time processing and Vert.x.
-REST JSON-B: JSON-B serialization support for Quarkus REST.
-Hibernate Validator: Validate object properties and method parameters for your beans.
-RESTEasy Classic JSON-B: JSON-B serialization support for RESTEasy Classic.
-REST Jackson: Jackson serialization support for Quarkus REST.
-Hibernate ORM with Panache: Simplify persistence code for Hibernate ORM.
-RESTEasy Classic: REST endpoint framework implementing Jakarta REST.
-REST JAXB: JAXB serialization support for Quarkus REST.
-JDBC Driver - PostgreSQL: Connect to PostgreSQL database via JDBC.
-Provided Code
-Hibernate ORM: Create your first JPA entity.
-REST Data with Panache: Generate Jakarta REST resources with Panache.
-RESTEasy JAX-RS: Easily start your RESTful Web Services.
-csharp
-Copy code
 
+## Related Guides
+
+REST resources for Hibernate ORM with Panache (guide): Generate Jakarta REST resources for your Hibernate Panache entities and repositories
+REST (guide): A Jakarta REST implementation utilizing build time processing and Vert.x. This extension is not compatible with the quarkus-resteasy extension, or any of the extensions that depend on it.
+REST JSON-B (guide): JSON-B serialization support for Quarkus REST. This extension is not compatible with the quarkus-resteasy extension, or any of the extensions that depend on it.
+Hibernate Validator (guide): Validate object properties (field, getter) and method parameters for your beans (REST, CDI, Jakarta Persistence)
+RESTEasy Classic JSON-B (guide): JSON-B serialization support for RESTEasy Classic
+REST Jackson (guide): Jackson serialization support for Quarkus REST. This extension is not compatible with the quarkus-resteasy extension, or any of the extensions that depend on it
+Hibernate ORM with Panache (guide): Simplify your persistence code for Hibernate ORM via the active record or the repository pattern
+RESTEasy Classic (guide): REST endpoint framework implementing Jakarta REST and more
+REST JAXB (guide): JAXB serialization support for Quarkus REST. This extension is not compatible with the quarkus-resteasy extension, or any of the extensions that depend on it.
+JDBC Driver - PostgreSQL (guide): Connect to the PostgreSQL database via JDBC
+
+## Provided Code
+Hibernate ORM
+Create your first JPA entity
+
+Related guide section...
+
+Related Hibernate with Panache section...
+
+REST Data with Panache
+Generating Jakarta REST resources with Panache
+
+Related guide section...
+
+REST
+Easily start your REST Web Services
+
+Related guide section...
+
+RESTEasy JAX-RS
+Easily start your RESTful Web Services
+
+Related guide sectio
 
 
 
