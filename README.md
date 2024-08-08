@@ -19,10 +19,10 @@ To run the application in a Docker container, navigate to the project's root dir
 docker-compose up
 This command will start the application and set up the database connection within the container.
 
-Build the Docker Image
+## Build the Docker Image
 To build the Docker image, choose one of the Dockerfiles located in src/main/docker that suits your needs and follow the instructions in the Dockerfile.
 
-Running the Application in Dev Mode (Locally)
+## Running the Application in Dev Mode (Locally)
 For development with live coding, use the following command:
 
 bash
@@ -30,13 +30,13 @@ Copy code
 ./mvnw compile quarkus:dev
 NOTE: In dev mode, Quarkus provides a Dev UI accessible at http://localhost:8080/q/dev/.
 
-Testing the Application
+## Testing the Application
 To run tests, execute:
 
 bash
 Copy code
 ./mvnw test
-Packaging and Running the Application
+## Packaging and Running the Application
 To package the application, use:
 
 bash
@@ -60,7 +60,7 @@ You can then run the über-jar with:
 bash
 Copy code
 java -jar target/*-runner.jar
-Creating a Native Executable
+## Creating a Native Executable
 To build a native executable, use:
 
 bash
