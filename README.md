@@ -96,8 +96,6 @@ RESTEasy JAX-RS: Easily start your RESTful Web Services.
 csharp
 Copy code
 
-You can copy and paste this markdown content into your `README.md` file.
-
 
 
 
