@@ -1,6 +1,7 @@
 # products-api
 
 This project uses [Quarkus](https://quarkus.io/), the Supersonic Subatomic Java Framework.
+If you want to learn more about Quarkus, please visit its website: https://quarkus.io/.
 
 ## Development Environment Setup
 
